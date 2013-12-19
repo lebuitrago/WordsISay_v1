@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>bscontroller</Title>
+    </Header>
+    <Snippet>
+      <Code Language="HTML">
+        <![CDATA[<div class="control-group" ng-class="{error: form.prop.$invalid}">
+                    <label class="control-label" for="prop">prop</label>
+                    <div class="controls">
+                      <input type="text" ng-model="item.prop" id="prop" name="prop" placeholder="" />
+                    </div>
+                  </div>]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

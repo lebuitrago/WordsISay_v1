@@ -1,0 +1,38 @@
+﻿<h2>{{action}} Story</h2>
+
+<div class="container">
+
+    <form name="form" class="form-horizontal">
+
+        <!-- Name -->
+        <div class="control-group" ng-class="{error: form.Name.$invalid}">
+            <label class="control-label" for="Name">Title</label>
+            <div class="controls">
+                <input type="text" ng-model="item.Name" id="Name" name="Name" placeholder="" />
+            </div>
+        </div>
+
+        <!-- Plot -->
+        <div class="control-group" ng-class="{error: form.Plot.$invalid}">
+            <label class="control-label" for="Plot">Plot</label>
+            <div class="controls">
+                <textarea ng-model="item.Plot" id="Plot" name="Plot" rows="4" cols="40"></textarea>
+            </div>
+        </div>
+
+        <!-- ImageURL -->
+        <div class="control-group" ng-class="{error: form.ImageURL.$invalid}">
+            <label class="control-label" for="ImageURL">ImageURL</label>
+            <div class="controls">
+                <input type="url" ng-model="item.ImageURL" id="ImageURL" name="ImageURL" placeholder="" />
+            </div>
+        </div>
+
+        <div class="form-action">
+            <button ng-click="save()" class="btn btn-primary">
+                {{action}}
+            </button>
+            <a href="#/" class="btn">Cancel</a>
+        </div>
+    </form>
+</div>

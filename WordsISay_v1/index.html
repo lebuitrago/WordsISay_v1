@@ -1,0 +1,36 @@
+﻿<!-- Main INDEX -->
+
+<!DOCTYPE html>
+<html ng-app='WordsApp'>
+    <head>
+        <script src="Scripts/jquery-2.0.3.js"></script>
+        <script src="Scripts/angular.min.js"></script>
+        <script src="Scripts/angular-route.min.js"></script>
+        <script src="Scripts/angular-resource.js"></script>
+        <script src="app/app.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="Content/bootstrap.css" />
+
+        <!-- Directives -->
+        <script src="app/scripts/directives/Sorted.js"></script>
+        <!-- Controllers -->
+        <script src="app/scripts/controllers/StoriesController.js"></script>
+        <script src="app/scripts/controllers/CreateController.js"></script>
+        <script src="app/scripts/controllers/EditController.js"></script>
+        <script src="app/scripts/controllers/PlayController.js"></script>
+        <!-- Services -->
+        <script src="app/scripts/services/StoriesService.js"></script>
+
+        <title>WordsISay</title>
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </body>
+
+</html>

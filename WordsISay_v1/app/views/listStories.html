@@ -1,0 +1,43 @@
+﻿<!-- VIEW -->
+
+<h1>User Created Stories</h1>
+
+<!-- Search Section -->
+<form class="form-search">
+    <div class="input-group">
+        <input type="text" ng-model="query" class="input-medium search-query" placeholder="Search in plot">
+        <button ng-click="reset()" type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+        <button ng-click="query=''; reset()" ng-disabled="!query" type="submit" class="btn btn-default">Reset</button>
+    </div>
+    <br />
+</form>
+
+<table class="table">
+
+    <tr ng-repeat="item in items" id="item_{{item.StoryId}}">
+        <td>
+            <img ng-src="~/app/images/VoteArrow.PNG" />
+        </td>
+        <td>
+            <div class="media">
+              <a class="pull-left" href="#/play/{{item.StoryId}}">
+                <img ng-src="{{item.ImageURL}}" alt="Story Picture" class="img-thumbnail" width="171" height="122">
+              </a>
+
+              <div class="media-body">
+                <h4 class="media-heading">
+                    {{item.Name}} 
+                    <span class="badge pull-middle">42</span> 
+                    <a href="#/edit/{{item.StoryId}}">
+                        <i class="glyphicon glyphicon-pencil"></i>  
+                    </a>
+                </h4>
+                <h6><em>Story began on {{item.DateCreated | date:'medium'}}</em></h6>
+                {{item.Plot}}
+              </div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<a ng-click="show_more()" ng-show ="has_more()">Show more</a>
